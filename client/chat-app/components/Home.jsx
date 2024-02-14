@@ -4,16 +4,18 @@ import { useNavigate } from 'react-router-dom'
 
 
 
-const handleSubmit = (e)=> {
-   e.preventDefault();
-   localStorage.setItem('userName', userName);
-   navigate('/chat')
-}
 
 const Home = () => {
 
   const navigate = useNavigate();
 const [userName, setUserName] = useState('');
+
+
+const handleSubmit = (e)=> {
+  e.preventDefault();
+  localStorage.setItem('userName', userName);
+  navigate('/chat')
+}
 
   return (
     <>
