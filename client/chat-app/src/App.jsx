@@ -1,7 +1,7 @@
 import React from 'react'
 import socketIO from 'socket.io-client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import  ChatPage   from '../components/ChatPage';
+import ChatPage from '../components/ChatPage';
 import  Home  from '../components/Home';
 
 
