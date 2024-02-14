@@ -6,7 +6,6 @@ const PORT = 4000;
 const http = require('http').Server(app);
 const cors = require('cors');
 
-app.use(cors());
 
 
 // TO Create Real-time Connection between Client and Server 
@@ -17,8 +16,19 @@ const socketIO = require('socket.io')(http, {
     }
 });
 
+app.use(cors());
+
+
 socketIO.on('connection', (socket) => {
     console.log(`⚡: ${socket.id} user just connected!`);
+
+    // Listens the message coming from the Client
+ socket.on('message', (data)=> {
+        socketIO.emit('messageResponse', data)
+        console.log(data)
+    })
+
+
     socket.on('disconnect', () => {
       console.log('🔥: A user disconnected');
     });
