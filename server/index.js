@@ -27,6 +27,9 @@ socketIO.on('connection', (socket) => {
     socketIO.emit('messageResponse', data);
   });
 
+// CHeck if the user is typing 
+socket.on('typing', (data)=> socket.brodcast.emit('typingResponse', data))
+
   //Listens when a new user joins the server
   socket.on('newUser', (data) => {
     //Adds the new user to the list of users
