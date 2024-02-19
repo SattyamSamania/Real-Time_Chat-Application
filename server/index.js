@@ -12,11 +12,14 @@ const cors = require('cors');
 
 const socketIO = require('socket.io')(http, {
     cors: {
-        origin: 'https://65d334be82ab72ed05b102d8--genuine-unicorn-f16ba8.netlify.app/'
+        origin: 'https://65d334be82ab72ed05b102d8--genuine-unicorn-f16ba8.netlify.app'
     }
 });
 
-app.use(cors());
+
+app.use(cors({
+  origin: 'https://65d334be82ab72ed05b102d8--genuine-unicorn-f16ba8.netlify.app'
+}))
 
 
 let users = [];
