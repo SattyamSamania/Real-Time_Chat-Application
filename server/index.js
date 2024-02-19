@@ -12,7 +12,7 @@ const cors = require('cors');
 
 const socketIO = require('socket.io')(http, {
     cors: {
-        origin: 'http://localhost:5173'
+        origin: 'https://real-time-chat-app-vgq4.onrender.com/'
     }
 });
 
