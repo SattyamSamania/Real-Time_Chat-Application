@@ -12,7 +12,7 @@ const cors = require('cors');
 
 const socketIO = require('socket.io')(http, {
     cors: {
-        origin: 'http://localhost:5173'
+        origin: 'https://65d334be82ab72ed05b102d8--genuine-unicorn-f16ba8.netlify.app/'
     }
 });
 
