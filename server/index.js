@@ -12,13 +12,13 @@ const cors = require('cors');
 
 const socketIO = require('socket.io')(http, {
     cors: {
-        origin: 'http://localhost:5173'
+        origin: 'https://65eedc7bd83a6d35ac751646--fantastic-custard-1b9eef.netlify.app/'
     }
 });
 
 
 app.use(cors({
-  origin: 'http://localhost:5173'
+  origin: 'https://65eedc7bd83a6d35ac751646--fantastic-custard-1b9eef.netlify.app/'
 }))
 
 
