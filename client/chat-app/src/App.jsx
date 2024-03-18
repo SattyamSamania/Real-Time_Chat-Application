@@ -5,7 +5,7 @@ import ChatPage from '../components/ChatPage';
 import  Home  from '../components/Home';
 
 
- const socket = socketIO.connect('http://localhost:4000/');
+ const socket = socketIO.connect('https://real-time-chat-application-1.onrender.com/');
 
 
 const App = () => {
