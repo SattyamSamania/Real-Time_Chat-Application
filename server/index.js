@@ -12,14 +12,12 @@ const cors = require('cors');
 
 const socketIO = require('socket.io')(http, {
     cors: {
-        origin: 'http://localhost:5173/'
+        origin: '*'
     }
 });
 
 
-app.use(cors({
-  origin: 'http://localhost:5173/'
-}))
+app.use(cors())
 
 
 let users = [];
